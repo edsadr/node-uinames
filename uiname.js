@@ -1,18 +1,22 @@
 'use strict';
 
-//var fs = require('fs');
+var fs = require('fs');
+var jsonQuery = require('json-query');
 
-module.exports = function(gender, country, amount) {
+module.exports = function(args) {
 
-  if (gender === undefined) {
-    gender = 'male';
-  }
+  args = (args === undefined) ? {} : args;
 
-  if (country === undefined) {
-    country = 'United States';
-  }
+  args.gender = (args.gender === undefined) ? 'male' : args.gender;
+  args.country = (args.country === undefined) ? 'United States' : args.country;
+  args.amount = (args.amount === undefined) ? 1 : args.amount;
+  
+  var results = [];
+  var source;
 
-  if (amount === undefined) {
-    amount = 1;
-  }
+  fs.readFile('names.json', function(err, data) {
+    if (err) throw err;
+    source = JSON.parse(data);
+    console.log(jsonQuery('[country='+args.country+']', {data: source}).value);
+  });
 }

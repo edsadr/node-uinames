@@ -1,2 +1,2 @@
 var uinames = require('./uiname.js');
-uinames();
+uinames({country: 'Bangladesh'});

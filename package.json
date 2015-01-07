@@ -3,6 +3,7 @@
   "description": "A simple module to generate names for use in designs and mockups - http://uinames.com",
   "version": "0.0.1",
   "dependencies": {
+    "json-query": "^1.4.0",
     "request": "^2.51.0"
   },
   "scripts": {
