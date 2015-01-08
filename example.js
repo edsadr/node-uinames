@@ -5,7 +5,7 @@ uinames({
   amount: 10
 }, function(err, data) {
   if (err) {
-    return console.err(err);
+    return console.error(err);
   }
 
   console.log(data);
