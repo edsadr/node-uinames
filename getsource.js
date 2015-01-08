@@ -1,6 +1,6 @@
  'use strict';
- var request = require('request')
-   ,fs = require('fs');
+ var request = require('request'),
+   fs = require('fs');
 
  fs.exists('names.json', function(exists) {
    if (!exists) {
