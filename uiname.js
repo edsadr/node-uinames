@@ -1,7 +1,6 @@
 'use strict';
 
-var fs = require('fs'),
-    defaults = require('defaults');
+var defaults = require('defaults');
 
 module.exports = function(args, callback) {
 
@@ -27,7 +26,7 @@ module.exports = function(args, callback) {
   try {
     source = require('./names');
   } catch (e) {
-    return callback(new Error("Source names not found, please run `getsource.js` script"));
+    return callback(new Error('Source names not found, please run `npm getsource` at the module folder'));
   }
 
   var countries = source.map(function(index){
