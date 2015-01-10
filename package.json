@@ -1,9 +1,8 @@
 {
   "name": "uinames",
-  "description": "A simple module to generate names for use in designs and mockups - http://uinames.com",
+  "description": "A simple module to generate random localized names using uinames(http://uinames.com) as the source",
   "version": "0.0.1",
-  "dependencies": {
-    "chai": "^1.10.0",
+  "dependencies": {    
     "defaults": "^1.0.0",
     "request": "^2.51.0"
   },
@@ -23,9 +22,9 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^1.21.4",
+    "chai": "^1.10.0",
     "istanbul": "^0.3.2",
-    "jshint": "^2.5.6",
-    "jscs": "^1.6.1"
+    "jshint": "^2.5.6"    
   },
   "repository": {
     "type": "git",

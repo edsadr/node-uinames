@@ -1,16 +1,42 @@
-# uinames
+# uinames for NodeJS
 
-A simple module to generate names for use in designs and mockups - http://uinames.com
-
-[![build status](https://secure.travis-ci.org/edsadr/uinames.png)](http://travis-ci.org/edsadr/uinames)
+A simple module to generate random localized names using uinames(http://uinames.com) as the source
 
 ## Installation
 
-```
-npm install uinames --save
+```shell
+$ npm install uinames --save
 ```
 
 ## Usage
+```js
+var uinames = require('uinames');
+
+uinames({
+  country: 'Colombia',
+  amount: 1
+}, function (err, data) {
+  if (err) {
+    return console.error(err);
+  }
+  //data is an array of objects and contains 1 object with these properties: 
+  //firstName (random Colombian first name), lastName (random Colombian surname), gender (is random) and country (is Colombia)
+  console.log(data);
+});
+
+uinames({
+  country: 'United States',
+  amount: 10,
+  gender: 'female'
+}, function (err, data) {
+  if (err) {
+    return console.error(err);
+  }
+  //data is an array of 10 objects, every object hast the same properties: 
+  //firstName (random female name), lastName (random surname), gender (female for all of them) and country (United States for all of them)
+  console.log(data);
+});
+```
 
 ## Credits
 [Adrián Estrada](https://github.com/edsadr/)
