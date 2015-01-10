@@ -1,9 +1,9 @@
-var uinames = require('./uiname.js');
+var uinames = require('./uinames.js');
 
 uinames({
   country: 'Colombia',
   amount: 10
-}, function(err, data) {
+}, function (err, data) {
   if (err) {
     return console.error(err);
   }

@@ -2,10 +2,10 @@
 
 var defaults = require('defaults');
 
-module.exports = function(args, callback) {
+module.exports = function (args, callback) {
 
   // Function extracting a random element from a given array
-  var randomElement = function(array) {
+  var randomElement = function (array) {
     return array[Math.floor(Math.random() * array.length)];
   };
 
@@ -29,7 +29,7 @@ module.exports = function(args, callback) {
     return callback(new Error('Source names not found, please run `npm getsource` at the module folder'));
   }
 
-  var countries = source.map(function(index){
+  var countries = source.map(function (index) {
     return index.country;
   });
 
@@ -40,7 +40,8 @@ module.exports = function(args, callback) {
   // Checking if the country is there
   if (!target || target.length < 1) {
     return callback(
-      new Error('Your country is not available, valid options are: ' + countries.toString())
+      new Error('Your country is not available, valid options are: ' + countries.toString() 
+      + ' - You can contribute yours here: https://github.com/thm/uinames/blob/master/names.json')
     );
   }
 
@@ -53,7 +54,8 @@ module.exports = function(args, callback) {
     var person = {
       firstName: randomElement(country[gender]),
       lastName: randomElement(country.surnames),
-      gender: gender
+      gender: gender,
+      country: query.country
     };
 
     results.push(person);
