@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var uinames = require('../uinames.js')
+var uinames = require('../index.js')
 
 
 describe('uinames', function () {
