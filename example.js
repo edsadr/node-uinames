@@ -1,4 +1,4 @@
-var uinames = require('uinames.js');
+var uinames = require('uinames');
 
 uinames({
   country: 'Colombia',
