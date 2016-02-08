@@ -6,7 +6,7 @@ var uinames = require('../index.js')
 
 describe('uinames', function () {
   uinames({
-    country: 'Nocountry'
+    region: 'Noregion'
   }, function (err, person) {
     it('Should be an error', function () {
       expect(err).not.to.be.null();
@@ -39,12 +39,12 @@ describe('uinames', function () {
     });
 
     it('Should be from Colombia', function () {
-      expect(person[0].country).to.be.equal('Colombia');
+      expect(person[0].region).to.be.equal('Colombia');
     });
   });
 
   uinames({
-    country: 'United States',
+    region: 'United States',
     amount: 10
   }, function (err, person) {
     it('Should have 10 people', function () {
@@ -52,7 +52,7 @@ describe('uinames', function () {
     });
 
     it('Should be from USA', function () {
-      expect(person[0].country).to.be.equal('United States');
+      expect(person[0].region).to.be.equal('United States');
     });
   });
 })
