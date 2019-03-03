@@ -1,6 +1,6 @@
 # uinames for NodeJS
 
-A simple module to generate random localized names using uinames(http://uinames.com) as the source
+A simple module to generate random localized names using uinames (http://uinames.com) as the source
 
 ## Installation
 
@@ -41,7 +41,7 @@ uinames({
 ## Credits
 [Adrián Estrada](https://github.com/edsadr/)
 
-###The MIT License
+### The MIT License
 
 Copyright (c) 2015 Adrián Estrada
 
